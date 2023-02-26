@@ -1,7 +1,10 @@
 package it.sim.collections.examples;
 
+
 import java.util.ArrayList;
+
 import java.util.Collections;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -13,7 +16,7 @@ public class Collection {
 		
 		ArrayList<String> fiori = new ArrayList<String>();
 		
-		
+		ArrayList<Integer> number = new ArrayList<Integer>();
 		//aggiungo elementi  metodo add()
 		fiori.add("rosa");  // 0
 		fiori.add("geranio");  //1
@@ -29,7 +32,7 @@ public class Collection {
 	
 		  
 		  //modifico un elemento set()
-		  fiori.set(4, "orchidea");
+		  fiori.set(0, "orchidea");
 		  System.out.println(fiori);
 		
 		  //rimuovere elemento remove()
@@ -38,7 +41,7 @@ public class Collection {
 		  
 		  //rimuovere tutti gli elementi clear()
 		  //fiori.clear();
-		  //System.out.println(fiori);
+		  //System.out.println("Lista svuotata: " + fiori);
 		  
 		  //misurare array size()
 		  //fiori.size();
@@ -75,20 +78,26 @@ public class Collection {
 		  
 		  LinkedList<Integer> numero = new LinkedList<Integer>();
 		  numero.add(4);
+		  numero.add(7);
 		  numero.add(78);
 		  numero.add(25);
-		  System.out.println(numero);
+		  System.out.println("LinkedList intero: " + numero);
 		  
 		
 		  //LinkedList ha suoi metodi specifici
 		 numero.addFirst(5);  // parametro = valore che vogliamo aggiungere
-		 System.out.println(numero);
+		 System.out.println("Valore aggiunto all'inizio:" + numero);
+		
 		 numero.addLast(90);
+		 System.out.println("Valore aggiunto alla fine:" + numero);
+		 
 		 numero.removeFirst();
 		 numero.removeLast();
+		 
 		 numero.get(1);  // 
 		 System.out.println(numero.get(1));  //output del secondo elemento
 		 System.out.println(numero);
+		 
 		 numero.getFirst();
 		 numero.getLast();
 		 
@@ -96,25 +105,30 @@ public class Collection {
 		 
 		 //String => key  ---- String => value
 		 HashMap<String,String> pet = new HashMap<String,String>();
-		 pet.put("uccello","canarino");
+		 pet.put("coniglio","gigante");
+		 pet.put("uccello","canarino"); //key=>value
 		 pet.put("gatto","soriano");
 		 pet.put("gatto1","soriano");
 		 pet.put("cane","labrador");
+		 pet.put("coniglio1","gigante");
+		 //pet.put("cane","retriever"); //la lista leggerà una sola chiave
+		
 		 //pet.put("uccello","aquila");
 		//attenzione all'ordine di lettura degli elementi
-		 System.out.println(pet);
+		 System.out.println("HashMap string/string " + pet);
 		 
 		 // lettura singolo elemento
 		 //cosa succede se accedo con il valore? qui viene restituito un null
 		 pet.get("soriano");
 		 System.out.println("Leggi il valore: " + pet.get("soriano"));
 		 
-		 
+		 //get() si imposta sulla chiave della lista
 		 pet.get("cane");
 		 System.out.println("Leggi il valore dalla chiave: " + pet.get("cane"));
 		 
-		 //pet.remove("gatto");
-		 //System.out.println(pet);
+		 pet.remove("gatto");
+		 System.out.println(pet);
+		 
 		 //rimozione totale elementi
 		 //pet.clear();
 		 
@@ -129,7 +143,8 @@ public class Collection {
 		 for(String i : pet.values()) {
 			 System.out.println("Valore:" + i);	 
 		 }
-		  
+		 
+		 //
 		 for(String i : pet.keySet()) {
 			 System.out.println("Chiave: " + i + " valore corrispondente: " + pet.get(i));			 
 		 }
@@ -139,8 +154,8 @@ public class Collection {
 		 HashMap<Integer, String> listaMista = new HashMap<Integer, String>();
 		 
 		 listaMista.put(12345, "Mario");
-		 //listaMista.put("Carla", 76543);
-		 //listaMista.put("Pinco", 87654);
+		 //listaMista.put("Carla", 76543); // ordine non rispettato
+		 
 		 
 		 for(Integer i : listaMista.keySet()) {
 			 System.out.println("Chiave:" + i);	 
@@ -157,8 +172,8 @@ public class Collection {
 		 car.add("Fiat");
 		 car.add("BMV");
 		 car.add("Audi");
-		 //car.add("Fiat");
-		 System.out.println(car);	 
+		 car.add("Fiat");
+		 System.out.println("Elementi HashSet: " + car);	 
 		 
 		 //metodo ritorna un booleano
 		 System.out.println(car.contains("Renault"));
@@ -185,10 +200,10 @@ public class Collection {
 		 for(int i = 0; i <= 10; i++) {
 			 
 			 if(listaNum.contains(i)) {
-				 System.out.println(i + " appartiene");
+				 System.out.println(i + " presente  nella lista");
 				 
 			 		}else {
-				 System.out.println(i + " non appartiene");
+				 System.out.println(i + " non presente nella lista");
 			 			}		  
 		 }
 		 
@@ -202,7 +217,8 @@ public class Collection {
 			
 			Iterator<String> loopItem = fioriBis.iterator();
 			
-			//System.out.println(loopItem.next());
+			//mostra il funzionamento di next()
+			System.out.println(loopItem.next());
 			
 			while(loopItem.hasNext()) {
 				System.out.println(loopItem.next());

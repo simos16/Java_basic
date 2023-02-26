@@ -21,11 +21,12 @@ public class Outer {
 			int val = 10;	
 		}
 		
+		
+		
 		enum Lista{
 			LARGE,
 			SMALL,
-			XLARGE
-			
+			XLARGE	
 		}
 
 }

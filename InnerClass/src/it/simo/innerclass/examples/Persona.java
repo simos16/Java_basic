@@ -5,12 +5,15 @@ public class Persona {
 	private String nome;
 	private Indirizzo indirizzo;
 	
+	
+	
+	
+	
 	public Persona(String nome) {
-		
-		this.nome = nome;
-			
+		this.nome = nome;			
 	}
 	
+	//esiste una classe Indirizzo dalla quale creo una classe wrapper 
 	private class Indirizzo{
 		String via;
 		String citta;
@@ -23,21 +26,19 @@ public class Persona {
 		}
 		
 		String stampaIndirizzo() {
-			
 			return nome + "abita in via: " + via + "al cap: " + cap + "della citta: " + citta;
 		}
 	}
 		
+	
+		//set dei parametri di indirizzo
 		public void creaIndirizzo(String via, String citta, String cap) {
-			
 			indirizzo = new Indirizzo(via, citta, cap);
 			
 		}	
 	
-	
-	
-	public String stampa() {
-		
+	//get di indirizzo
+	public String stampa() {	
 		return indirizzo.stampaIndirizzo();
 	}
 	

@@ -16,7 +16,8 @@ public class Main implements  FunzioniStringa  {
 	    codici.add(543);
 	    codici.add(456);
 	   
-	    codici.forEach( (i) -> { System.out.println(i); } );
+	    //la lambda viene passata come parametro del metodo
+	    codici.forEach((i) -> { System.out.println(i); });
 	    
 	    
 	    ArrayList<Float> matricole = new ArrayList<Float>();
@@ -30,10 +31,14 @@ public class Main implements  FunzioniStringa  {
 	    
 	    
 	    
+	    System.out.println("=========Lambda passata come parametro====");
 	    
-	    
+	    //parametro -> istruzione;
+	    //(par1, par2) -> istruzione; -> { return value;}
 	    FunzioniStringa giorno = (str) -> str + "buona giornata";
 	    FunzioniStringa sera = (str) -> str + "buona serata";
+	   
+	    //lambda viene invocata come argomento del metodo
 	    stringaStampata("Ciao, ", giorno);
 	    stringaStampata("Ciao, ", sera);
 	}
@@ -47,14 +52,19 @@ public class Main implements  FunzioniStringa  {
 
 
 	 
-
-
-
+	 
+	 
 	@Override
 	public String scrivi(String str) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	 
+
+
+
 
 
 	

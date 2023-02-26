@@ -11,6 +11,7 @@ public class Main {
 		Outer.Inner objInner = objOut.new Inner();
 		
 		objInner.valore = 12;
+		objInner.recupera();
 		
 		
 		System.out.println(objInner.recupera()); // output 7
@@ -22,28 +23,31 @@ public class Main {
 		Outer.InnerStatic objStatic = new Outer.InnerStatic();
 		objStatic.val = 20;
 		
-			
+			System.out.println("=======ENUMS========");
+		//richiamo enum da file esterno
+		MyList items = MyList.ALTO;
+		System.out.println("Valore della lista: " + items);
+
 		
-MyList items = MyList.ALTO;
+		//questa lista è definita all'interno della classe
+		Lista itemLista = Lista.SMALL;
 
-Lista itemLista = Lista.SMALL;
+		switch(itemLista) {
+			case LARGE:
+				System.out.println("LARGE: Taglia troppo grande");
+				break;
+			case SMALL:
+				System.out.println("SMALL: Taglia giusta");
+				break;
+			case XLARGE:
+				System.out.println("XL: Taglia eccessiva");
+				break;	
+		}
 
-switch(itemLista) {
-case LARGE:
-	System.out.println("LARGE: Taglia troppo grande");
-	break;
-case SMALL:
-	System.out.println("SMALL: Taglia giusta");
-	break;
-case XLARGE:
-	System.out.println("XL: Taglia eccessiva");
-	break;	
-}
-
-for(Lista items1 : Lista.values()) {
-	System.out.println(items1);
+		for(Lista items1 : Lista.values()) {
+			System.out.println("Elenco elementi della enum Lista: " + items1);
 	
-}
+		}
 
 
 System.out.println("=========USO CLASSE INTERNA PRIVATE=======");
