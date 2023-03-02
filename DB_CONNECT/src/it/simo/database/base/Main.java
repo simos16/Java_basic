@@ -24,7 +24,7 @@ public class Main {
 			 * Terzo dato è il nome dell'utente accreditato nel server (root)
 			 * Quarto dato è la password dell'utente accreditato
 			 * */
-			Connection connessione = DriverManager.getConnection("jdbc:mysql://localhost:3306/importo", "root", "simodev20");
+			Connection connessione = DriverManager.getConnection("jdbc:mysql://localhost:3306/TUO-DB", "TUO_USER", "TUA-PASSWORD");
 			
 			//creare l'istruzione
 			Statement  myStat = connessione.createStatement();
