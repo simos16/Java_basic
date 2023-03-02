@@ -17,7 +17,7 @@ public class PrepStat{
              String testo = insert.nextLine();
       
            
-             Connection connessione = DriverManager.getConnection("jdbc:mysql://localhost:3306/importo", "root", "simodev20");
+             Connection connessione = DriverManager.getConnection("jdbc:mysql://localhost:3306/TUO-DB", "TUO-USER", "TUA-PASSWORD");
              Statement  myStat = connessione.createStatement();
              myStat.execute("CREATE TABLE IF NOT EXISTS demo (id_test INT NOT NULL AUTO_INCREMENT, titolo VARCHAR(100), testo VARCHAR(200), PRIMARY KEY(id_test))");
   
