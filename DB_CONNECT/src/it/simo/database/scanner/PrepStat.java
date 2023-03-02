@@ -11,9 +11,9 @@ public class PrepStat{
     public static void main(String[] args){
         Scanner insert =new Scanner(System.in);
          try {
-             System.out.println("Enter titolo:");
+             System.out.println("Inserisci titolo:");
              String titolo = insert.nextLine();
-             System.out.println("Enter testo:");
+             System.out.println("Inserisci testo:");
              String testo = insert.nextLine();
       
            
@@ -30,10 +30,10 @@ public class PrepStat{
              int i = pst.executeUpdate();
       
              if(i!=0){
-            	 System.out.println("added");
+            	 System.out.println("record aggiunto");
              }
              else{
-            	 System.out.println("failed to add");
+            	 System.out.println("problema con l'inserimento");
              }
              ResultSet leggoTabella = pst.executeQuery("SELECT * FROM demo");
              while(leggoTabella.next()) {
