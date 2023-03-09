@@ -10,7 +10,7 @@ public class Impiegati {
 	   private int salario;
 	   private List<Impiegati> dipendenti;
 
-	   // constructor
+	
 	   public Impiegati(String nome,String dipartimento, int salario) {
 	      this.nome = nome;
 	      this.dipartimento = dipartimento;
