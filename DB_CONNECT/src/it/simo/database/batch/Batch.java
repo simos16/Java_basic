@@ -21,7 +21,7 @@ public class Batch {
 	    {
 		  
 			
-		  Connection connessione = DriverManager.getConnection("jdbc:mysql://localhost:3306/importo", "root", "simodev20");
+		  Connection connessione = DriverManager.getConnection("jdbc:mysql://localhost:3306/TUO-DB", "TUO-UTENTE", "TUA-PASSWORD");
 		  Statement  myStat = connessione.createStatement();
           myStat.execute("CREATE TABLE IF NOT EXISTS persone (id_persone INT NOT NULL AUTO_INCREMENT, "
           		+ "cognome VARCHAR(100), "
