@@ -11,9 +11,6 @@ public class ScriviUtenti {
 	      return (Utente) objUtente.clone();
 	   }
 
-	   // for each shape run database query and create shape
-	   // shapeMap.put(shapeKey, shape);
-	   // for example, we are adding three shapes
 	   
 	   public static void caricaUtenti() {
 	      Rappresentanti rap = new Rappresentanti();

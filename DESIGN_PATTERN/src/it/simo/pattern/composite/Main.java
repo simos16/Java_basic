@@ -24,7 +24,7 @@ public class Main {
 	     marketing.add(imp1);
 	     marketing.add(imp2);
 
-	      //print all employees of the organization
+	     
 	      System.out.println(CEO); 
 	      
 	      for (Impiegati managerImp : CEO.getDipendenti()) {

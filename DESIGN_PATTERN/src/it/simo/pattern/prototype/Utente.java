@@ -30,7 +30,6 @@ public abstract class Utente implements Cloneable {
 		try {
 			clone = super.clone();
 		} catch (CloneNotSupportedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
