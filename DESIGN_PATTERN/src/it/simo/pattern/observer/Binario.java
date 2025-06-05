@@ -4,9 +4,9 @@ public class Binario extends Observer{
 	
         public Binario(Soggetto soggetto) {
                 this.soggetto = soggetto;
-                //this.soggetto.attach(this);
-		
-	}
+                this.soggetto.attach(this);
+
+        }
 
 	@Override
 	public void aggiorna() {
