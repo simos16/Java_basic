@@ -2,9 +2,9 @@ package it.simo.pattern.observer;
 
 public class Ottale extends Observer {
 
-	public Ottale(Soggetto soggetto) {
-		this.soggetto = soggetto;
-	      //this.soggetto.attach(this);
+        public Ottale(Soggetto soggetto) {
+                this.soggetto = soggetto;
+                this.soggetto.attach(this);
 		
 	}
 	@Override
